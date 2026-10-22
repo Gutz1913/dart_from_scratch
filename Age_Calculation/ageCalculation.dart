@@ -1,5 +1,5 @@
-import 'Shared/DateUtilities.dart';
-import 'Shared/PrintExtension.dart';
+import '../Shared/DateUtilities.dart';
+import '../Shared/PrintExtension.dart';
 
 void main() {
   print('¡Hola! Bienvenido al calculador de años.');
