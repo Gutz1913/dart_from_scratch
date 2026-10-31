@@ -3,11 +3,11 @@ Construir un programa que calcule los n primeros términos de la serie de Taylor
 • Prueba 1 => Al ejecutar el programa debe mostrar lo siguiente:
 Cuantos términos desea: 20
 Digita el valor de x: 1
-f(x) = 2,718282
+f(x) = 0.36788
 • Prueba 2 => Al ejecutar el programa debe mostrar lo siguiente:
-Cuantos términos desea: 500
-Digita el valor de x: 2
-f(x) = 7,389056 */
+Cuantos términos desea: 300
+Digita el valor de x: 8
+f(x) = 0.00034 */
 
 import 'dart:math';
 
