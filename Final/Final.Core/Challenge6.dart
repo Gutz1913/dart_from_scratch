@@ -47,13 +47,13 @@ class Challenge6 {
         print('****** EJERCICIO DE ENVÍO DE MERCANCÍAS ******');
         print('');
 
-        var weigth = PrintExtension.getDouble('Ingrese el peso de la mercancía: ');
-        var value = PrintExtension.getDouble('Ingrese el valor de la mercancía: ');
+        var weigth = PrintExtension.getDouble('Ingrese el peso de la mercancía.......: ');
+        var value = PrintExtension.getDouble ('Ingrese el valor de la mercancía......: ');
         
         String isMonday;
         do {
           isMonday = PrintExtension.getValidOptions(
-                  'Es lunes [S]í, [N]o?..............: ', options) ??
+                  'Es lunes [S]í, [N]o?..................: ', options) ??
               '';
         } while (!options.any((x) => x.toLowerCase() == isMonday.toLowerCase()));
 
@@ -61,16 +61,17 @@ class Challenge6 {
         String payMethod;
         do {
           payMethod = PrintExtension.getValidOptions(
-                  'Tipo de pago [E]fectivo, [T]arjeta: ', payMethods) ??
+                  'Tipo de pago [E]fectivo, [T]arjeta....: ', payMethods) ??
               '';
         } while (!payMethods.any((x) => x.toLowerCase() == payMethod.toLowerCase()));
 
-        var fare = _calculateFare(weigth);
-        var discount = _calculateDiscount(fare, value);
-        double promotion = 0;
+        double fare = _calculateFare(weigth);
+
+        double promotion = _calculatePromotion(fare, isMonday, payMethod, value);
+        double discount = 0;
         
-        if (discount == 0) {
-          promotion = _calculatePromotion(fare, isMonday, payMethod, value);
+        if (promotion == 0) {
+          discount = _calculateDiscount(fare, value);
         }
 
         print('');

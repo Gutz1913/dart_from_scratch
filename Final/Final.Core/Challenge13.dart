@@ -2,7 +2,7 @@
 Hacer un programa que calcule el número natural e, dado el número de términos requeridos por el usuario.
 • Prueba: Al ejecutar el programa debe mostrar lo siguiente:
 Cuantos términos de precisión desea: 10
-El valor de 'e' con 10 términos de precisión es: 2.718281525573192243
+El valor de 'e' con 10 términos de precisión es: 2.7182815255731922
 */
 
 import '../../Shared/MyMath.dart';
